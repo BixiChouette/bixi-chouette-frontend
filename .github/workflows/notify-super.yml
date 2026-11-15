@@ -1,0 +1,15 @@
+name: Notify superproject
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SUPER_PAT }}
+          repository: Khaled-AbHe/BixiChouette
+          event-type: submodule-updated
+          client-payload: '{"module": "frontend"}'
