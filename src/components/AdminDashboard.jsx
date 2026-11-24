@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Tableau de bord administrateur
 export default function AdminDashboard() {
