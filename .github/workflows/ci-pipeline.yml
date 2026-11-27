@@ -27,8 +27,8 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Rapport de couverture de tests
-          path: test_coverage
+          name: test_coverage
+          path: coverage/Icov-report/index.html
 
       - name: Construire un build
         run: npm run build
