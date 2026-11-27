@@ -25,6 +25,11 @@ jobs:
       - name: Lancer les tests avec jest
         run: npm run test
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Rapport de couverture de tests
+          path: test_coverage
+
       - name: Construire un build
         run: npm run build
 
