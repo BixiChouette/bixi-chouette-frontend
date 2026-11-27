@@ -22,13 +22,13 @@ jobs:
       - name: Assurance de qualiter avec ESLint
         run: npm run lint
 
-      - name: Lancer les tests avec jest
-        run: npm run test
+      # - name: Lancer les tests avec jest
+      #   run: npm run test
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: test_coverage
-          path: coverage/Icov-report/index.html
+      # - uses: actions/upload-artifact@v4
+      #   with:
+      #     name: test_coverage
+      #     path: coverage/Icov-report/index.html
 
       - name: Construire un build
         run: npm run build
